@@ -1,0 +1,90 @@
+solidity pdho--- code eaters channel h
+
+
+1.install->npx thirdweb@latest create -- contract
+2.ques krega terminal->then project name kch bhi de skte h project name k ques m
+3.ques krega terminal->phr framework hm hardhat use krenge    
+4.ques krega terminal->What will be the name of your new smart contract? ... kch bhi naam dedo
+5.ques krega terminal->What type of contract do you want to start from? » empty contract choose krenge kyunki scratch s banaenge
+6.install hoga phr cmd aega cd wala wo krna h
+
+---------./contracts/funding.sol-----
+7.contracts folder k andr apn file ka naam change krenge or code m bhi function ka naam change krenge--
+        contract Funding {
+            struct{     -- ye blueprint h iske andr objects  banenge or ye datastructer h--net pr dekho--
+
+            address -- ye datatype h ek jese js m var let const
+            string -- ye bhi datatype h
+            uint256 -- ye unsigned integer datatype h jisme range bhi h 256 or bhi hote h uint110,uint112,etc
+    
+    -------code---------
+            address owner;
+        string title;
+        string description;
+        uint256 target;
+        uint256 amountCollected;
+        uint256 deadline;
+        string image;
+        address[] donators;
+        uint256[] donations;
+            }
+            mapping(uint256=>Campaign) public campaigns; -- hashmap jesa h---sirf abhi structure bataya h bs
+            jisme key hogi int and value hogi Campaign
+
+        }
+
+8.payable keyword->agr transaction krna h to payable access specifier lenege payable
+                    function bhi hota
+9.msg-> hme user ki information dega
+    msg.value->hme amount dega
+    msg.sender->hme address dega user ka
+10.view->specifier jisey lagaenge to hm sirf read kr skenge 
+
+
+---metamask---
+chrome webstore s download krna h metamask
+chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/home.html#onboarding/secure-your-wallet
+free ethers uthane h->https://sepoliafaucet.com/ ---- sepolia id paste krni h site pr jaa kr
+rpc ankr->thirdweb environment k liye account link aati thi  etherum column m usko
+hardhat.config k solidity m daalna h
+    or code ye krna h uska------
+    or sepolia ki url m rpc ankr ki link aaegi or accounts m .env file web3
+    folder m jo banai h uske andr primary key h jo ki hmne metamask s uthai accounts details m jaa kr
+    sepolia wallet s
+    phr apn npx run deploy chalenge wo hme link dega us pr click krenge to thirdweb s connect krenege phr apn
+% solidity: {
+%     version: "0.8.17",
+%     defaultNetwork:"sepolia",
+%     networks:{
+%       hardhat:{},
+%       sepolia:{
+%         url:"https://rpc.ankr.com/eth",
+%         accounts:[`${process.env.PRIMARY_KEY}`]
+%       }
+%     },
+%     settings: {
+%       optimizer: {
+%         enabled: true,
+%         runs: 200,
+%       },
+%     },
+%   }
+
+
+------ui-----------
+1.client folder m jaaenge phr likhenege npx thirdweb create --app
+2.usme project name m ./ denege
+3.phr hm evm use krenge
+4.phr hm vite use krenge
+5.phr hm javascript use krenge
+6.npm run dev s chalega ye jissey port link milegi us pr click krenge
+7.src delete krenge khudse banaenge apn
+8.npm i react-router-dom ye hm client k andr krenge
+9.src folder banenge client k andr phr uske andr main.jsx file banaenge
+10. es7+ react extention install krenge phr rafc likhenge  jise code import hoga app.js m
+11.tailwind css use krenege css k jgh
+12.tailwind m jaa kr documentation pr jaenge phr vite choose krenge usme 
+using react m documentation h jisme 
+    -npm install -D tailwindcss postcss autoprefixer --ye krenge
+documentation s krna h phr poora...
+13. phr hm properties lagaenge react wala part h poora. 
